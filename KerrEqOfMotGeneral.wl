@@ -1698,9 +1698,9 @@ where for the Kerr metric:
 ";
 
 
-\[Tau]::usage = " \[Tau][s,{\!\(\*SubscriptBox[\(\[Tau]\), \(\(0\)\(,\)\(\\\ \)\)]\)\!\(\*SubscriptBox[\(\[Epsilon]\), \(r\)]\), \!\(\*SubscriptBox[\(\[Xi]\), \(0\)]\), \!\(\*SubscriptBox[\(\[Epsilon]\), \(\[Theta]\)]\), \!\(\*SubscriptBox[\(\[Theta]\), \(0\)]\), \[CurlyEpsilon], \[Kappa], \!\(\*SubscriptBox[\(\[Lambda]\), \(z\)]\), \[Alpha], \[Delta]}] returns the value of the coordinate time depending on the Mino time and initial parameters:
+\[CapitalTau]::usage = " \[CapitalTau][s,{\!\(\*SubscriptBox[\(\[CapitalTau]\), \(\(0\)\(,\)\(\\\ \)\)]\)\!\(\*SubscriptBox[\(\[Epsilon]\), \(r\)]\), \!\(\*SubscriptBox[\(\[Xi]\), \(0\)]\), \!\(\*SubscriptBox[\(\[Epsilon]\), \(\[Theta]\)]\), \!\(\*SubscriptBox[\(\[Theta]\), \(0\)]\), \[CurlyEpsilon], \[Kappa], \!\(\*SubscriptBox[\(\[Lambda]\), \(z\)]\), \[Alpha], \[Delta]}] returns the value of the coordinate time depending on the Mino time and initial parameters:
 	- \!\(\*
-StyleBox[SubscriptBox[\"\[Tau]\", \"0\"],\nFontSlant->\"Italic\"]\) - initial time;
+StyleBox[SubscriptBox[\"\[CapitalTau]\", \"0\"],\nFontSlant->\"Italic\"]\) - initial time;
 	- \!\(\*
 	StyleBox[SubscriptBox[\"\[Epsilon]\", \"r\"],\nFontSlant->\"Italic\"]\)- direction of initial motion:
 		\!\(\*TagBox[GridBox[{
@@ -1743,9 +1743,9 @@ StyleBox[\"\[Alpha]\",\nFontSlant->\"Italic\"]\) - value of the angular momentum
 ";
 
 
-\[CapitalTau]::usage = " \[CapitalTau][s,{\!\(\*SubscriptBox[\(\[CapitalTau]\), \(0\)]\),\!\(\*SubscriptBox[\(\[Epsilon]\), \(r\)]\), \!\(\*SubscriptBox[\(\[Xi]\), \(0\)]\), \!\(\*SubscriptBox[\(\[Epsilon]\), \(\[Theta]\)]\), \!\(\*SubscriptBox[\(\[Theta]\), \(0\)]\), \[CurlyEpsilon], \[Kappa], \!\(\*SubscriptBox[\(\[Lambda]\), \(z\)]\), \[Alpha], \[Delta]}] returns the value of the affine parameter depending on the Mino time and initial parameters:
+tild\[Tau]::usage = " tild\[Tau][s,{\!\(\*SubscriptBox[\(tild\[Tau]\), \(0\)]\),\!\(\*SubscriptBox[\(\[Epsilon]\), \(r\)]\), \!\(\*SubscriptBox[\(\[Xi]\), \(0\)]\), \!\(\*SubscriptBox[\(\[Epsilon]\), \(\[Theta]\)]\), \!\(\*SubscriptBox[\(\[Theta]\), \(0\)]\), \[CurlyEpsilon], \[Kappa], \!\(\*SubscriptBox[\(\[Lambda]\), \(z\)]\), \[Alpha], \[Delta]}] returns the value of the affine parameter depending on the Mino time and initial parameters:
 	- \!\(\*
-StyleBox[SubscriptBox[\"\[CapitalTau]\", \"0\"],\nFontSlant->\"Italic\"]\) - initial time;
+StyleBox[SubscriptBox[\"tild\[Tau]\", \"0\"],\nFontSlant->\"Italic\"]\) - initial time;
 	- \!\(\*
 	StyleBox[SubscriptBox[\"\[Epsilon]\", \"r\"],\nFontSlant->\"Italic\"]\)- direction of initial motion:
 		\!\(\*TagBox[GridBox[{
@@ -2656,7 +2656,7 @@ J\[Theta][s_,{\[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[La
 		]
 
 
-\[Tau][s_,{\[Tau]0_, \[Epsilon]r_, \[Xi]0_, \[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alpha]_, \[Delta]_}]:= Module[{Ap,Am,NHp,NHm},
+\[CapitalTau][s_,{\[CapitalTau]0_, \[Epsilon]r_, \[Xi]0_, \[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alpha]_, \[Delta]_}]:= Module[{Ap,Am,NHp,NHm},
 		(* We need to add a simple condition on angular momentum here to guard against Mathematica's numerical errors resulting from direct 0/0 division *)
 		If[\[Alpha]!=0,
 			If[Abs[\[Alpha]]!=1, 
@@ -2665,23 +2665,23 @@ J\[Theta][s_,{\[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[La
 				NHp = NH[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta], 1}];
 				NHm = NH[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta], -1}];
 				(* final result *)		
-				\[Tau]0 +((4+\[Alpha]^2)\[CurlyEpsilon] - \[Alpha]*\[Lambda]z)s + 2*\[CurlyEpsilon]*N1[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+\[CurlyEpsilon]*N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + Ap*NHp + Am*NHm + \[Alpha]*\[Lambda]z*s - \[Alpha]^2*\[CurlyEpsilon]*J\[Theta][s,{\[Epsilon]\[Theta], \[Theta]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]//Re,
+				\[CapitalTau]0 +((4+\[Alpha]^2)\[CurlyEpsilon] - \[Alpha]*\[Lambda]z)s + 2*\[CurlyEpsilon]*N1[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+\[CurlyEpsilon]*N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + Ap*NHp + Am*NHm + \[Alpha]*\[Lambda]z*s - \[Alpha]^2*\[CurlyEpsilon]*J\[Theta][s,{\[Epsilon]\[Theta], \[Theta]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]//Re,
 					(* Final result for extremal Kerr *)
 					(5*\[CurlyEpsilon]-\[Alpha]*\[Lambda]z)*s + 2*\[CurlyEpsilon]*N1[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + \[CurlyEpsilon]*N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+ (8*\[CurlyEpsilon] - 2 *\[Alpha]*\[Lambda]z)*N4[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] +(4*\[CurlyEpsilon] - 2*\[Alpha]*\[Lambda]z)*N5[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + \[Alpha]*\[Lambda]z*s - \[Alpha]^2*\[CurlyEpsilon]*J\[Theta][s,{\[Epsilon]\[Theta], \[Theta]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]//Re
 				],
 				Ap= 8*\[CurlyEpsilon];
 				NHp = NH[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta], 1}];
 				(* final result *)		
-				\[Tau]0 +4*\[CurlyEpsilon]*s + 2*\[CurlyEpsilon]*N1[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+\[CurlyEpsilon]*N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + Ap*NHp //Re
+				\[CapitalTau]0 +4*\[CurlyEpsilon]*s + 2*\[CurlyEpsilon]*N1[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+\[CurlyEpsilon]*N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + Ap*NHp //Re
 			]
 		]
 
 
-\[CapitalTau][s_,{\[CapitalTau]0_, \[Epsilon]r_, \[Xi]0_, \[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alpha]_, \[Delta]_}]:=
+tild\[Tau][s_,{tild\[Tau]0_, \[Epsilon]r_, \[Xi]0_, \[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alpha]_, \[Delta]_}]:=
 	(* We need to add a simple condition on angular momentum here to guard against Mathematica's numerical errors resulting from direct 0/0 division *)
 	If[\[Alpha]!=0,
-		\[CapitalTau]0+N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+\[Alpha]^2*(s-J\[Theta][s,{\[Epsilon]\[Theta], \[Theta]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}])//Re,
-			\[CapitalTau]0+N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]
+		tild\[Tau]0+N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+\[Alpha]^2*(s-J\[Theta][s,{\[Epsilon]\[Theta], \[Theta]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}])//Re,
+			tild\[Tau]0+N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]
 		]
 
 
