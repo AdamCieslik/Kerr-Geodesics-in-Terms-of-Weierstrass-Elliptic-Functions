@@ -7,7 +7,7 @@ To use the library in Mathematica, put the KerrEqOfMotGeneral.wl package file in
 	SetDirectory[NotebookDirectory[]];
   	<< "KerrEqOfMotGeneral.wl";
   
-See the Demo.nb to see how to use the basic functions of the package.
+Check the Demo.nb to see how to use the basic functions of the package.
 
 ## Contributing
 
