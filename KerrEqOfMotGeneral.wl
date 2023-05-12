@@ -4,7 +4,7 @@ BeginPackage["KerrEqOfMotGeneral`"];
 
 
 (* 
-Author: Adam Cie\:015blik
+Author: Adam Cieslik
 Contact: adamdariuszcieslik@gmail.com
 *)
 
