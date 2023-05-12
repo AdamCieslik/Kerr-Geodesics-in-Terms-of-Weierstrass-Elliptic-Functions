@@ -3,6 +3,12 @@
 BeginPackage["KerrEqOfMotGeneral`"];
 
 
+(* 
+Author: Adam Cie\:015blik
+Contact: adamdariuszcieslik@gmail.com
+*)
+
+
 FancylogN::usage = " Fancylog[x,y,{\!\(\*SubscriptBox[\(g\), \(2\)]\),\!\(\*SubscriptBox[\(g\), \(3\)]\)}] returns the value of function \!\(\*
 StyleBox[\"Log\",\nFontFamily->\"Times New Roman\",\nFontWeight->\"Regular\"]\)\!\(\*
 StyleBox[\"(\",\nFontFamily->\"Times New Roman\",\nFontWeight->\"Regular\"]\)\!\(\*
