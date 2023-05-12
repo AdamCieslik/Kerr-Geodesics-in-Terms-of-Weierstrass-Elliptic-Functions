@@ -6,6 +6,7 @@ BeginPackage["KerrEqOfMotGeneral`"];
 (* 
 Author: Adam Cieslik
 Contact: adamdariuszcieslik@gmail.com
+Date: 12.05.2023
 *)
 
 
