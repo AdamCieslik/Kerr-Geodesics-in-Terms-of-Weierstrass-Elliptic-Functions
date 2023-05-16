@@ -1,5 +1,5 @@
 # Kerr-Geodesics-in-Terms-of-Weierstrass-Elliptic-Functions
-provides  general solutions of the Kerr geodesic equations in Boyer-Lindquist coordinates. It contains an implementation of  all functions presented in Ref. X.
+provides  general solutions of the Kerr geodesic equations in Boyer-Lindquist coordinates. It contains an implementation of  all functions presented in [arXiv:2305.07771](https://arxiv.org/abs/2305.07771).
 
 ## Use in Mathematica
 
@@ -17,3 +17,4 @@ to discuss what you would like to change.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
