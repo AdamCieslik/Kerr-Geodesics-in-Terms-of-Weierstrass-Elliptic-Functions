@@ -3,13 +3,6 @@
 BeginPackage["KerrEqOfMotGeneral`"];
 
 
-(* 
-Author: Adam Cieslik
-Contact: adamdariuszcieslik@gmail.com
-Date: 12.05.2023
-*)
-
-
 FancylogN::usage = " Fancylog[x,y,{\!\(\*SubscriptBox[\(g\), \(2\)]\),\!\(\*SubscriptBox[\(g\), \(3\)]\)}] returns the value of function \!\(\*
 StyleBox[\"Log\",\nFontFamily->\"Times New Roman\",\nFontWeight->\"Regular\"]\)\!\(\*
 StyleBox[\"(\",\nFontFamily->\"Times New Roman\",\nFontWeight->\"Regular\"]\)\!\(\*
@@ -1273,7 +1266,7 @@ where for the Kerr metric:
 
 
 I\[Xi]::usage = "I\[Xi][s,{\!\(\*SubscriptBox[\(\[Epsilon]\), \(r\)]\),\!\(\*SubscriptBox[\(\[Xi]\), \(0\)]\), \[CurlyEpsilon], \[Kappa], \!\(\*SubscriptBox[\(\[Lambda]\), \(z\)]\), \[Alpha], \[Delta]}]returns a value of the integral
-	\[Alpha]\!\(\*SubsuperscriptBox[\(\[Integral]\), \(0\), \(s\)]\)\!\(\*FractionBox[\(\([\*SuperscriptBox[\(\[Xi]\), \(2\)] \((\*OverscriptBox[\(s\), \(_\)])\)\\\  + \\\ \*SuperscriptBox[\(\[Alpha]\), \(2\)]]\) \[CurlyEpsilon]\\\  - \\\ \*SubscriptBox[\(\[Alpha]\[Lambda]\), \(z\)]\), \(\*SuperscriptBox[\(\[Xi]\), \(2\)] \((\*OverscriptBox[\(s\), \(_\)])\)\\\  - \\\ 2  \[Xi] \((\*OverscriptBox[\(s\), \(_\)])\) + \*SuperscriptBox[\(\[Alpha]\), \(2\)]\)]\)\[DifferentialD]\!\(\*OverscriptBox[\(s\), \(_\)]\),
+	\[Alpha] \!\(\*SubsuperscriptBox[\(\[Integral]\), \(0\), \(s\)]\)\!\(\*FractionBox[\(2  \[Xi] \((\*OverscriptBox[\(s\), \(_\)])\) \[CurlyEpsilon]\\\  - \\\ \*SubscriptBox[\(\[Alpha]\[Lambda]\), \(z\)]\), \(\*SuperscriptBox[\(\[Xi]\), \(2\)] \((\*OverscriptBox[\(s\), \(_\)])\) - 2  \[Xi] \((\*OverscriptBox[\(s\), \(_\)])\) + \*SuperscriptBox[\(\[Alpha]\), \(2\)]\)]\)\[DifferentialD]\!\(\*OverscriptBox[\(s\), \(_\)]\),
 where for the Kerr metric: 
 	- \[Xi](\!\(\*OverscriptBox[\(s\), \(_\)]\)) is the radial distance given by function \[Xi][s,{\!\(\*SubscriptBox[\(\[Epsilon]\), \(r\)]\), \!\(\*SubscriptBox[\(\[Xi]\), \(0\)]\), \[CurlyEpsilon], \[Lambda], \!\(\*SubscriptBox[\(\[Lambda]\), \(z\)]\), \[Alpha], \[Delta]}]
 	- \!\(\*SubsuperscriptBox[\(\[Xi]\), \(H\), \(\[PlusMinus]\)]\) = 1 + \!\(\*SubscriptBox[\(\[Epsilon]\), \(h\)]\)\!\(\*SqrtBox[\(1\\\  - \\\ \*SuperscriptBox[\(\[Alpha]\), \(2\)]\)]\) - position of black hole horizons , \!\(\*SubscriptBox[\(\[Epsilon]\), \(h\)]\)= 1 for \!\(\*SubsuperscriptBox[\(\[Xi]\), \(H\), \(+\)]\) (the outer horizon) and \!\(\*SubscriptBox[\(\[Epsilon]\), \(h\)]\)=-1 for \!\(\*SubsuperscriptBox[\(\[Xi]\), \(H\), \(-\)]\) (the inner horizon)
@@ -1668,6 +1661,41 @@ Variables \[CurlyEpsilon], \[Kappa], \!\(\*SubscriptBox[\(\[Lambda]\), \(z\)]\) 
 },\nAllowedDimensions->{2, Automatic},\nEditable->True,\nGridBoxAlignment->{\"Columns\" -> {{Left}}, \"Rows\" -> {{Baseline}}},\nGridBoxItemSize->{\"Columns\" -> {{Automatic}}, \"Rows\" -> {{1.}}},\nGridBoxSpacings->{\"Columns\" -> {Offset[0.27999999999999997`], {Offset[0.84]}, Offset[0.27999999999999997`]}, \"Rows\" -> {Offset[0.2], {Offset[0.4]}, Offset[0.2]}},\nSelectable->True]}
 },\nGridBoxAlignment->{\"Columns\" -> {{Left}}, \"Rows\" -> {{Baseline}}},\nGridBoxItemSize->{\"Columns\" -> {{Automatic}}, \"Rows\" -> {{1.}}},\nGridBoxSpacings->{\"Columns\" -> {Offset[0.27999999999999997`], {Offset[0.35]}, Offset[0.27999999999999997`]}, \"Rows\" -> {Offset[0.2], {Offset[0.4]}, Offset[0.2]}}],
 \"Piecewise\",\nDeleteWithContents->True,\nEditable->False,\nSelectWithContents->True,\nSelectable->False,\nStripWrapperBoxes->True]\)
+";
+
+
+J\[Xi]::usage = "J\[Xi][s,{\!\(\*SubscriptBox[\(\[Epsilon]\), \(r\)]\),\!\(\*SubscriptBox[\(\[Xi]\), \(0\)]\), \[CurlyEpsilon], \[Kappa], \!\(\*SubscriptBox[\(\[Lambda]\), \(z\)]\), \[Alpha], \[Delta]}]returns a value of the integral
+	\[Alpha] \!\(\*SubsuperscriptBox[\(\[Integral]\), \(0\), \(s\)]\)\!\(\*FractionBox[\(\*SuperscriptBox[\((\*SuperscriptBox[\(\[Xi]\), \(2\)] \((\*OverscriptBox[\(s\), \(_\)])\) + \*SuperscriptBox[\(\[Alpha]\), \(2\)])\), \(2\)] \[CurlyEpsilon]\\\  - \\\ \*SubscriptBox[\(\[Alpha]\[Lambda]\), \(z\)] \[Xi] \((\*OverscriptBox[\(s\), \(_\)])\)\), \(\*SuperscriptBox[\(\[Xi]\), \(2\)] \((\*OverscriptBox[\(s\), \(_\)])\) - 2  \[Xi] \((\*OverscriptBox[\(s\), \(_\)])\) + \*SuperscriptBox[\(\[Alpha]\), \(2\)]\)]\)\[DifferentialD]\!\(\*OverscriptBox[\(s\), \(_\)]\),
+where for the Kerr metric: 
+	- \[Xi](\!\(\*OverscriptBox[\(s\), \(_\)]\)) is the radial distance given by function \[Xi][s,{\!\(\*SubscriptBox[\(\[Epsilon]\), \(r\)]\), \!\(\*SubscriptBox[\(\[Xi]\), \(0\)]\), \[CurlyEpsilon], \[Lambda], \!\(\*SubscriptBox[\(\[Lambda]\), \(z\)]\), \[Alpha], \[Delta]}]
+	- \!\(\*SubsuperscriptBox[\(\[Xi]\), \(H\), \(\[PlusMinus]\)]\) = 1 + \!\(\*SubscriptBox[\(\[Epsilon]\), \(h\)]\)\!\(\*SqrtBox[\(1\\\  - \\\ \*SuperscriptBox[\(\[Alpha]\), \(2\)]\)]\) - position of black hole horizons , \!\(\*SubscriptBox[\(\[Epsilon]\), \(h\)]\)= 1 for \!\(\*SubsuperscriptBox[\(\[Xi]\), \(H\), \(+\)]\) (the outer horizon) and \!\(\*SubscriptBox[\(\[Epsilon]\), \(h\)]\)=-1 for \!\(\*SubsuperscriptBox[\(\[Xi]\), \(H\), \(-\)]\) (the inner horizon)
+	- \!\(\*
+	StyleBox[SubscriptBox[\"\[Epsilon]\", \"r\"],\nFontSlant->\"Italic\"]\)- direction of initial motion:
+		\!\(\*TagBox[GridBox[{
+	{\(\[Piecewise]\), GridBox[{
+	{\(\*SubscriptBox[\(\[Epsilon]\), \(r\)]\(=\)\(1\)\(\\\ \)\), \(\(for\\\ motion\\\ outward\\\ of\\\ the\\\ coordinate\\\ system\)\(,\)\)},
+	{\(\*SubscriptBox[\(\[Epsilon]\), \(r\)] = \(-1\)\), \(for\\\ motion\\\ inward\\\ of\\\ the\\\ coordinate\\\ \(\(system\)\(.\)\)\)}
+	},\nAllowedDimensions->{2, Automatic},\nEditable->True,\nGridBoxAlignment->{\"Columns\" -> {{Left}}, \"Rows\" -> {{Baseline}}},\nGridBoxItemSize->{\"Columns\" -> {{Automatic}}, \"Rows\" -> {{1.}}},\nGridBoxSpacings->{\"Columns\" -> {Offset[0.27999999999999997`], {Offset[0.84]}, Offset[0.27999999999999997`]}, \"Rows\" -> {Offset[0.2], {Offset[0.4]}, Offset[0.2]}},\nSelectable->True]}
+	},\nGridBoxAlignment->{\"Columns\" -> {{Left}}, \"Rows\" -> {{Baseline}}},\nGridBoxItemSize->{\"Columns\" -> {{Automatic}}, \"Rows\" -> {{1.}}},\nGridBoxSpacings->{\"Columns\" -> {Offset[0.27999999999999997`], {Offset[0.35]}, Offset[0.27999999999999997`]}, \"Rows\" -> {Offset[0.2], {Offset[0.4]}, Offset[0.2]}}],
+	\"Piecewise\",\nDeleteWithContents->True,\nEditable->False,\nSelectWithContents->True,\nSelectable->False,\nStripWrapperBoxes->True]\)
+	- \!\(\*
+	StyleBox[SubscriptBox[\"\[Xi]\", \"0\"],\nFontSlant->\"Italic\"]\) - initial radial position;
+	- \!\(\*
+	StyleBox[\"\[CurlyEpsilon]\",\nFontSlant->\"Italic\"]\) - value of the conserved energy;
+	- \!\(\*
+	StyleBox[\"\[Kappa]\",\nFontSlant->\"Italic\"]\) - value of the Carter constant;
+	- \!\(\*
+	StyleBox[SubscriptBox[\"\[Lambda]\", \"z\"],\nFontSlant->\"Italic\"]\) - value of the conserved alangular momentum;
+	- \!\(\*
+	StyleBox[\"\[Alpha]\",\nFontSlant->\"Italic\"]\) - value of the angular momentum per black hole mass \[Alpha]=\!\(\*FractionBox[\(J\), \(M\)]\); 
+	- \[Delta] - symbol responsible for the type of geodesic: 
+		\!\(\*TagBox[GridBox[{
+	{\(\[Piecewise]\), GridBox[{
+	{\(\(\[Delta]\)\(=\)\(1\)\(\\\ \)\), \(\(for\\\ time - like\\\ geodesics\)\(,\)\)},
+	{\(\[Delta] = 0\), \(for\\\ null\\\ \(\(geodesic\)\(.\)\)\)}
+	},\nAllowedDimensions->{2, Automatic},\nEditable->True,\nGridBoxAlignment->{\"Columns\" -> {{Left}}, \"Rows\" -> {{Baseline}}},\nGridBoxItemSize->{\"Columns\" -> {{Automatic}}, \"Rows\" -> {{1.}}},\nGridBoxSpacings->{\"Columns\" -> {Offset[0.27999999999999997`], {Offset[0.84]}, Offset[0.27999999999999997`]}, \"Rows\" -> {Offset[0.2], {Offset[0.4]}, Offset[0.2]}},\nSelectable->True]}
+	},\nGridBoxAlignment->{\"Columns\" -> {{Left}}, \"Rows\" -> {{Baseline}}},\nGridBoxItemSize->{\"Columns\" -> {{Automatic}}, \"Rows\" -> {{1.}}},\nGridBoxSpacings->{\"Columns\" -> {Offset[0.27999999999999997`], {Offset[0.35]}, Offset[0.27999999999999997`]}, \"Rows\" -> {Offset[0.2], {Offset[0.4]}, Offset[0.2]}}],
+	\"Piecewise\",\nDeleteWithContents->True,\nEditable->False,\nSelectWithContents->True,\nSelectable->False,\nStripWrapperBoxes->True]\)
 ";
 
 
@@ -2160,9 +2188,9 @@ I\[Xi][s_,{\[Epsilon]r_,\[Xi]0_,\[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alph
 				NHp = NH[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta], 1}];
 				NHm = NH[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta], -1}];
 				(* final result *)
-				(\[Alpha]*\[CurlyEpsilon])/(\[Xi]Hp-\[Xi]Hm) ((\[Xi]Hp-\[Xi]Hm)*s+(\[Xi]Hp^2+\[Alpha]^2-(\[Alpha]*\[Lambda]z)/\[CurlyEpsilon])NHp - (\[Xi]Hm^2+\[Alpha]^2-(\[Alpha]*\[Lambda]z)/\[CurlyEpsilon])NHm),
-					(* Case extreme Kerr *)
-					\[Alpha]*\[CurlyEpsilon]*s + 2*\[Alpha]*\[CurlyEpsilon]*N4[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + (2*\[Alpha]*\[CurlyEpsilon] - \[CurlyEpsilon]*\[Lambda]z)*N5[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]
+				(\[Alpha]*\[CurlyEpsilon])/(\[Xi]Hp-\[Xi]Hm) ((\[Xi]Hp^2 +\[Alpha]^2 - (\[Alpha]*\[Lambda]z)/\[CurlyEpsilon])*NHp - (\[Xi]Hm^2+\[Alpha]^2-(\[Alpha]*\[Lambda]z)/\[CurlyEpsilon])NHm ),
+					(* final result for the extreme Kerr *)
+					2*\[Alpha]*\[CurlyEpsilon]*N4[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + (2*\[Alpha]*\[CurlyEpsilon] - \[Lambda]z)*N5[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]
 				],
 				0
 			]	
@@ -2262,7 +2290,7 @@ I\[Theta][s_,{\[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[La
 
 
 \[CurlyPhi][s_,{\[CurlyPhi]0_, \[Epsilon]r_, \[Xi]0_, \[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alpha]_, \[Delta]_}]:= 
-		\[CurlyPhi]0 + I\[Xi][s,{\[Epsilon]r,\[Xi]0,\[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + I\[Theta][s,{\[Epsilon]\[Theta], \[Theta]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] - \[Alpha]*\[CurlyEpsilon]*s//Re
+		\[CurlyPhi]0 + I\[Xi][s,{\[Epsilon]r,\[Xi]0,\[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + I\[Theta][s,{\[Epsilon]\[Theta], \[Theta]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] //Re
 
 
 N1[s_,{\[Epsilon]r_, \[Xi]0_, \[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alpha]_, \[Delta]_}]:=
@@ -2619,6 +2647,27 @@ dv[p_,x_,\[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alpha]_, \[Delta]_]:=
 	D[v[r,\[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]],{r,p}]/.r->x
 
 
+J\[Xi][s_,{\[Epsilon]r_, \[Xi]0_, \[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alpha]_, \[Delta]_}]:= Module[{Ap,Am,NHp,NHm},
+		(* We need to add a simple condition on angular momentum here to guard against Mathematica's numerical errors resulting from direct 0/0 division *)
+		If[\[Alpha]!=0,
+			If[Abs[\[Alpha]]!=1, 
+				Ap=(2(-\[Alpha]^2+2Sqrt[1-\[Alpha]^2] + 2)\[CurlyEpsilon] - \[Alpha](Sqrt[1-\[Alpha]^2] +1)*\[Lambda]z)/Sqrt[1-\[Alpha]^2];
+				Am=(2(+\[Alpha]^2+2Sqrt[1-\[Alpha]^2] - 2)\[CurlyEpsilon] - \[Alpha](Sqrt[1-\[Alpha]^2] -1)*\[Lambda]z)/Sqrt[1-\[Alpha]^2];
+				NHp = NH[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta], 1}];
+				NHm = NH[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta], -1}];
+				(* final result *)		
+				(4+\[Alpha]^2)\[CurlyEpsilon]*s + 2*\[CurlyEpsilon]*N1[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+\[CurlyEpsilon]*N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + Am*NHm  + Ap*NHp//Re,
+					(* final result for the extremal Kerr *)
+					5*\[CurlyEpsilon]*s + 2*\[CurlyEpsilon]*N1[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + \[CurlyEpsilon]*N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+ 2*(4*\[CurlyEpsilon] - \[Alpha]*\[Lambda]z)*N4[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] +2*(2*\[CurlyEpsilon] - \[Alpha]*\[Lambda]z)*N5[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]//Re
+				],
+					Ap= 8*\[CurlyEpsilon];
+					NHp = NH[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta], 1}];
+					(* final result *)		
+					4*\[CurlyEpsilon]*s + 2*\[CurlyEpsilon]*N1[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+\[CurlyEpsilon]*N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + Ap*NHp //Re
+			]
+		]
+
+
 J\[Theta][s_,{\[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alpha]_, \[Delta]_}]:=
 	Module[{e1,e2,e3,e4,c1,c2,\[Eta],u0,D1, D2, D3, D4, PP, g2, g3, z0, pp ,solp ,n2,I10,I30,I80,I40,ddP,\[Epsilon]\[Mu],\[CapitalTheta]},
 		\[Epsilon]\[Mu] = Sign[Cos[\[Theta]0]];
@@ -2663,25 +2712,7 @@ J\[Theta][s_,{\[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[La
 		]
 
 
-\[CapitalTau][s_,{\[CapitalTau]0_, \[Epsilon]r_, \[Xi]0_, \[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alpha]_, \[Delta]_}]:= Module[{Ap,Am,NHp,NHm},
-		(* We need to add a simple condition on angular momentum here to guard against Mathematica's numerical errors resulting from direct 0/0 division *)
-		If[\[Alpha]!=0,
-			If[Abs[\[Alpha]]!=1, 
-				Ap=(2(-\[Alpha]^2+2Sqrt[1-\[Alpha]^2] + 2)\[CurlyEpsilon] - \[Alpha](Sqrt[1-\[Alpha]^2] +1)*\[Lambda]z)/Sqrt[1-\[Alpha]^2];
-				Am=(2(+\[Alpha]^2+2Sqrt[1-\[Alpha]^2] - 2)\[CurlyEpsilon] - \[Alpha](Sqrt[1-\[Alpha]^2] -1)*\[Lambda]z)/Sqrt[1-\[Alpha]^2];
-				NHp = NH[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta], 1}];
-				NHm = NH[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta], -1}];
-				(* final result *)		
-				\[CapitalTau]0 +((4+\[Alpha]^2)\[CurlyEpsilon] - \[Alpha]*\[Lambda]z)s + 2*\[CurlyEpsilon]*N1[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+\[CurlyEpsilon]*N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + Ap*NHp + Am*NHm + \[Alpha]*\[Lambda]z*s - \[Alpha]^2*\[CurlyEpsilon]*J\[Theta][s,{\[Epsilon]\[Theta], \[Theta]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]//Re,
-					(* Final result for extremal Kerr *)
-					(5*\[CurlyEpsilon]-\[Alpha]*\[Lambda]z)*s + 2*\[CurlyEpsilon]*N1[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + \[CurlyEpsilon]*N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+ (8*\[CurlyEpsilon] - 2 *\[Alpha]*\[Lambda]z)*N4[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] +(4*\[CurlyEpsilon] - 2*\[Alpha]*\[Lambda]z)*N5[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + \[Alpha]*\[Lambda]z*s - \[Alpha]^2*\[CurlyEpsilon]*J\[Theta][s,{\[Epsilon]\[Theta], \[Theta]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]//Re
-				],
-				Ap= 8*\[CurlyEpsilon];
-				NHp = NH[s,{\[Epsilon]r,\[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta], 1}];
-				(* final result *)		
-				\[CapitalTau]0 +4*\[CurlyEpsilon]*s + 2*\[CurlyEpsilon]*N1[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]+\[CurlyEpsilon]*N2[s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] + Ap*NHp //Re
-			]
-		]
+\[CapitalTau][s_,{\[CapitalTau]0_, \[Epsilon]r_, \[Xi]0_, \[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alpha]_, \[Delta]_}]:= \[CapitalTau]0+ J\[Xi][s,{\[Epsilon]r, \[Xi]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}] - \[Alpha]^2*\[CurlyEpsilon]*J\[Theta][s,{\[Epsilon]\[Theta], \[Theta]0, \[CurlyEpsilon], \[Kappa], \[Lambda]z, \[Alpha], \[Delta]}]//Re
 
 
 tild\[Tau][s_,{tild\[Tau]0_, \[Epsilon]r_, \[Xi]0_, \[Epsilon]\[Theta]_, \[Theta]0_, \[CurlyEpsilon]_, \[Kappa]_, \[Lambda]z_, \[Alpha]_, \[Delta]_}]:=
